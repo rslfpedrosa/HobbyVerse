@@ -5,10 +5,10 @@ import * as THREE from 'three';
 import { PlanetId } from '../data/mockData';
 
 export const PLANET_GLB_MAP: Record<PlanetId, string> = {
-  'garden': '/grass_ball.glb',
+  'garden': '/garden-planet.glb',
   'baking': '/baking.glb',
   'woodworking': '/wood_planet.glb',
-  'knitting': '/kit-planet.glb',
+  'knitting': '/wood_planet.glb',
   'polymer-clay': '/clay.glb',
   'painting': '/painting.glb',
   'pottery': '/pottery.glb',
