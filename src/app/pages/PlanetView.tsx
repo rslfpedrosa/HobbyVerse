@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, Plus, Heart, X, Sparkles, MessageCircle, Send, ImagePlus, Link2, Globe, Users, UserX, UserPlus, UserCheck, Bookmark, Pencil } from 'lucide-react';
-import { PlanetId, Contribution, Comment, Visibility, PLANETS } from '../data/mockData';
+import { PlanetId, Contribution, Comment, Visibility } from '../data/mockData';
 import { isHexLight } from '../utils/color';
 import { craftImage } from '../utils/craftImage';
 import { STAMP_ILLUSTRATIONS } from '../data/stampIllustrations';
@@ -102,8 +102,7 @@ export default function PlanetView() {
     closeEdit();
   };
 
-  const sourceBgColor = PLANETS.find(p => p.id === id)?.bgColor;
-  const isLightBg = !!sourceBgColor && isHexLight(sourceBgColor);
+  const isLightBg = !!planet.bgColor && isHexLight(planet.bgColor);
 
   const liveContribution = selectedContribution
     ? contributions.find((c) => c.id === selectedContribution.id) ?? selectedContribution

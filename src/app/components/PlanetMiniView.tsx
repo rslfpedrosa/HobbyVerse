@@ -8,7 +8,7 @@ export const PLANET_GLB_MAP: Record<PlanetId, string> = {
   'garden': '/garden-planet.glb',
   'baking': '/baking.glb',
   'woodworking': '/wood_planet.glb',
-  'knitting': '/wool.glb',
+  'knitting': '/quit.glb',
   'polymer-clay': '/clay.glb',
   'painting': '/painting.glb',
   'pottery': '/pottery.glb',

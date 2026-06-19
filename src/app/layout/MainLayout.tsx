@@ -7,7 +7,6 @@ import AddPlanetModal from '../components/AddPlanetModal';
 import { AnimatePresence, motion } from 'motion/react';
 import { SceneProvider } from '../context/SceneContext';
 import UnifiedCanvas from './UnifiedCanvas';
-import { PLANETS } from '../data/mockData';
 
 export default function MainLayout() {
   const { setIsPassportOpen, isPassportOpen, planets } = useAppContext();
@@ -17,7 +16,7 @@ export default function MainLayout() {
   const match = location.pathname.match(/^\/planet\/(.+)/);
   const isGalaxyView = !match;
   const planetId = match?.[1] ?? '';
-  const bgColor = PLANETS.find(p => p.id === planetId)?.bgColor ?? '#120640';
+  const bgColor = planets.find(p => p.id === planetId)?.bgColor ?? '#120640';
 
   return (
     <SceneProvider>
