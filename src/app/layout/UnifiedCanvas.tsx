@@ -45,7 +45,7 @@ function GLBPlanetModel({ modelRef, scale, url, normalize = false }: { modelRef:
 useGLTF.preload('/wood_planet.glb');
 useGLTF.preload('/garden-planet.glb');
 useGLTF.preload('/baking.glb');
-useGLTF.preload('/kit-planet.glb');
+useGLTF.preload('/wool.glb');
 useGLTF.preload('/clay.glb');
 useGLTF.preload('/painting.glb');
 useGLTF.preload('/pottery.glb');
@@ -595,7 +595,7 @@ function PlanetMesh({
         {isGarden && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/garden-planet.glb" normalize /></Suspense>}
         {isBaking && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/baking.glb" normalize /></Suspense>}
         {isWoodworking && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/wood_planet.glb" normalize /></Suspense>}
-        {isKnitting && <Suspense fallback={<FallbackSphere size={planet.size} color="#b0b8e8" />}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/kit-planet.glb" normalize /></Suspense>}
+        {isKnitting && <Suspense fallback={<FallbackSphere size={planet.size} color="#b0b8e8" />}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/wool.glb" normalize /></Suspense>}
         {isPolymerClay && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/clay.glb" normalize /></Suspense>}
         {isPainting && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/painting.glb" normalize /></Suspense>}
         {isPottery && <Suspense fallback={null}><GLBPlanetModel modelRef={glbGroupRef} scale={planet.size * 2} url="/pottery.glb" normalize /></Suspense>}
